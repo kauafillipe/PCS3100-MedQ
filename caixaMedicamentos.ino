@@ -10,17 +10,16 @@
  * 
  * Considerações:
  * - considera-se que o usuário colocará o medicamento em sua devida divisória da caixa ao adicioná-lo no programa.
- * - para este protótipo, trabalha-se num período de apenas um dia, não sendo possível programar uma rotina ou frequência de medicamentos. Em deccorrência
- *   disso, considera-se que o usuário não adicionará medicamentos para horários anteriores ao atual.
+ * - para este protótipo, trabalha-se num período de apenas um dia, não sendo possível programar uma rotina ou frequência de medicamentos.
  * - lê-se apeanas valores inteiros de horas(18:00, 10:00, etc)
  * - o programa prevê atrasos de apenas poucos minutos (se fosse contar com atrasos de horas, o atraso de um medicamento poderia coincidir com o horário de outro,
- *   algo que será trabalhado para resolver nas próximas versões).
+ *   gerando erros, algo que será trabalhado para resolver nas próximas versões).
  * 
  * Projeções futuras:
  * - ler valores fracionais de hora.
  * - trabalhar com períodos maiores que de um dia e poder programar a frequência dos medicamentos.
  * - armazenar a hora em que o medicamento foi tomado e alertar caso tomado com atraso.
- * - organizar a agenda em ordem crescente de horário.
+ * - organizar a agenda em ordem crescente de horários.
 */
 #include<stdlib.h>
 #include<string.h>
@@ -98,7 +97,7 @@ BLYNK_WRITE(V1){ /*função chamada quando algo é digitado no terminal*/
   }
 }
 
-BLYNK_WRITE(V2){
+BLYNK_WRITE(V2){ //Widget de relógio
   tempo = param.asLong();
 }
 
