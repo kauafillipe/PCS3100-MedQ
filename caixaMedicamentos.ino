@@ -32,7 +32,7 @@ SoftwareSerial SwSerial(10, 11); //
 #define MAX 5 //maximo de 5 medicamentos
 #define LETRAS 20 // maximo de letras para nomes
 
-char auth[] = "2yguU-D-rs28SncbFmmaeUH9h2LPBa5J";
+char auth[] = "";
 
 WidgetTerminal terminal(V1);
 
